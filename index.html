@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Color Change</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+      
+            height: 100vh;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .flex{
+        
+            padding: 10px 20px;
+            background-color: aqua;
+            border: none;
+        }
+    </style>
+  </head>
+  <body>
+    <button type="button"  class="btn flex" onclick="changeColor()">Change Color</button>
+    <script>
+      const button = document.querySelector(".btn");
+      const body = document.querySelector("body");
+      const color = ["blue", "green", "yellow", "pink"];
+
+      function changeColor() {
+        const index = parseInt(Math.random() * 1000);
+        // console.log(index);
+        body.style.backgroundColor = '#'+index;
+      }
+    </script>
+  </body>
+</html>
